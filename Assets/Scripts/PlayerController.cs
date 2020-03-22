@@ -19,12 +19,24 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody.AddForce(0, 0, forwardForce * Time.deltaTime);
 
-      
-        rigidbody.AddForce(Input.acceleration.x *sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+
+        rigidbody.AddForce(Input.acceleration.x * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
 
         if (rigidbody.position.y < -1f)
         {
             FindObjectOfType<GameManager>().EndGame();
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            rigidbody.AddForce(-10 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            rigidbody.AddForce(10 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
