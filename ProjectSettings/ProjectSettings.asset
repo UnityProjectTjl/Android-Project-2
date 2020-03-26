@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: de.jonas.BlockRunner
+  companyName: de.ThreeYoungDevs.BlockRunner
   productName: Block Runner
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -258,8 +258,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{inproject}: KeyStore/user.keystore'
-  AndroidKeyaliasName: blockrunner
+  AndroidKeystoreName: '{inproject}: KeyStore/project.keystore'
+  AndroidKeyaliasName: threeyoungdevs
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

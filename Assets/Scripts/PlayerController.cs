@@ -32,11 +32,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            rigidbody.AddForce(-10 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            rigidbody.AddForce(-5 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
-            rigidbody.AddForce(10 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
+            rigidbody.AddForce(5 * sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }

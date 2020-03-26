@@ -6,11 +6,14 @@ public class LevelComplete : MonoBehaviour
 {
 
     private InterstitialAd interstitial;
+    private int personalizeAds;
 
     // Start is called before the first frame update
     void Start()
     {
         RequestInterstitial();
+
+        personalizeAds = PlayerPrefs.GetInt("personalizeAds");
     }
 
     // Update is called once per frame
@@ -31,10 +34,23 @@ public class LevelComplete : MonoBehaviour
 
         // Initialize an InterstitialAd.
         this.interstitial = new InterstitialAd(adUnitId);
-        // Create an empty ad request.
-        AdRequest request = new AdRequest.Builder().Build();
-        // Load the interstitial with the request.
-        this.interstitial.LoadAd(request);
+
+        if (personalizeAds == 1)
+        {
+            // Create an empty ad request.
+            AdRequest request = new AdRequest.Builder().Build();
+            // Load the interstitial with the request.
+            this.interstitial.LoadAd(request);
+        }
+        else
+        {
+            // Create an empty ad request.
+            AdRequest request = new AdRequest.Builder()
+                .AddExtra("npa", "1")
+                .Build();
+            // Load the interstitial with the request.
+            this.interstitial.LoadAd(request);
+        }
     }
 
     public void LoadAd()
