@@ -25,12 +25,12 @@ public class LevelComplete : MonoBehaviour
     private void RequestInterstitial()
     {
         #if UNITY_ANDROID
-                string adUnitId = "ca-app-pub-3940256099942544/1033173712";
-        #elif UNITY_IPHONE
-                                        string adUnitId = "ca-app-pub-3940256099942544/1033173712";
-        #else
+                string adUnitId = "ca-app-pub-3484489003477619/7074041944";
+#elif UNITY_IPHONE
+                                        string adUnitId = "ca-app-pub-3484489003477619/7074041944";
+#else
                                         string adUnitId = "unexpected_platform";
-        #endif
+#endif
 
         // Initialize an InterstitialAd.
         this.interstitial = new InterstitialAd(adUnitId);
